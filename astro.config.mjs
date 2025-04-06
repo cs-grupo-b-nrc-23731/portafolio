@@ -7,8 +7,8 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
     output: 'static',
     trailingSlash: 'always',
-    site: 'https://cs-grupo-b-nrc-23731.github.io/portafolio/',
-
+    site: 'https://cs-grupo-b-nrc-23731.github.io',
+    base: 'portafolio',
     // Single page, no prefetch needed
     prefetch: false,
 
