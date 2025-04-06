@@ -1,3 +1,3 @@
 User-agent: *
 
-Sitemap: https://devidev.io/sitemap-index.xml
+Sitemap: https://cs-grupo-b-nrc-23731.github.io/sitemap-index.xml
