@@ -7,6 +7,11 @@ import Contact from '../components/Contact.astro';
 import ContentLink from '../components/ContentLink.astro';
 import ContentCode from '../components/ContentAbout.astro';
 import ContentProjects from '../components/ContentProjects.astro';
+import ContentM73524543 from '../components/ContentM73524543.astro';
+import ContentM00447908 from '../components/ContentM00447908.astro';
+import ContentM42729761 from '../components/ContentM42729761.astro';
+import ContentM75411504 from '../components/ContentM75411504.astro';
+import ContentM70771419 from '../components/ContentM70771419.astro';
 ---
 
 <Layout>
@@ -48,6 +53,42 @@ import ContentProjects from '../components/ContentProjects.astro';
                         class="tab-radio"
                     />
 
+                    <input
+                        type="radio"
+                        id="tab3"
+                        name="tabs"
+                        class="tab-radio"
+                    />
+
+
+                    <input
+                        type="radio"
+                        id="tab4"
+                        name="tabs"
+                        class="tab-radio"
+                    />
+
+                    <input
+                        type="radio"
+                        id="tab5"
+                        name="tabs"
+                        class="tab-radio"
+                    />
+                    
+                    <input
+                        type="radio"
+                        id="tab6"
+                        name="tabs"
+                        class="tab-radio"
+                    />
+
+                    <input
+                        type="radio"
+                        id="tab7"
+                        name="tabs"
+                        class="tab-radio"
+                    />
+
                     <!-- Start: Tab bar -->
                     <div class="flex bg-black border-b border-gray-600 sticky top-0 z-10">
 
@@ -58,9 +99,36 @@ import ContentProjects from '../components/ContentProjects.astro';
 
                         <ContentLink
                             contentId="tab2"
-                            contentName="projects.md"
+                            contentName="Carlos-Ernesto.md"
                         />
 
+                        <ContentLink
+                            contentId="tab3"
+                            contentName="Gustavo-Oscar.md"
+                        />
+
+                        <ContentLink
+                            contentId="tab4"
+                            contentName="Sebastian-Martin.md"
+                        />
+
+                        <ContentLink
+                            contentId="tab5"
+                            contentName="Wilfredo.md"
+                        />
+
+                        <ContentLink
+                            contentId="tab6"
+                            contentName="Daniel.md"
+                        />
+
+
+                        <ContentLink
+                            contentId="tab7"
+                            contentName="Jacob.md"
+                        />
+
+                        
                     </div>
                     <!-- End: Tab bar -->
 
@@ -78,6 +146,37 @@ import ContentProjects from '../components/ContentProjects.astro';
                             <ContentProjects />
                         </div>
                         <!-- End: Projects content -->
+
+                        <!-- Start: Projects content -->
+                        <div id="content3" class="tab-content">
+                            <ContentM73524543 />
+                        </div>
+                        <!-- End: Projects content -->
+
+                        <!-- Start: Projects content -->
+                        <div id="content4" class="tab-content">
+                            <ContentM00447908 />
+                        </div>
+                        <!-- End: Projects content -->
+
+                        <!-- Start: Projects content -->
+                        <div id="content5" class="tab-content">
+                            <ContentM42729761 />
+                        </div>
+                        <!-- End: Projects content -->
+
+                        <!-- Start: Projects content -->
+                        <div id="content6" class="tab-content">
+                            <ContentM75411504 />
+                        </div>
+                        <!-- End: Projects content -->                        
+                        
+
+                        <!-- Start: Projects content -->
+                        <div id="content7" class="tab-content">
+                            <ContentM70771419 />
+                        </div>
+                        <!-- End: Projects content -->     
 
                     </div>
                     <!-- End: Tab content -->
@@ -137,4 +236,51 @@ import ContentProjects from '../components/ContentProjects.astro';
         @apply border-b-2 border-b-primary;
     }
 
+
+    /* When tab3 */
+    #tab3:checked ~ * #content3 {
+        @apply block opacity-100;
+    }
+
+    #tab3:checked ~ .flex .tab-link:nth-child(3) {
+        @apply border-b-2 border-b-primary;
+    }
+
+    /* When tab4 */
+    #tab4:checked ~ * #content4 {
+        @apply block opacity-100;
+    }
+
+    #tab4:checked ~ .flex .tab-link:nth-child(4) {
+        @apply border-b-2 border-b-primary;
+    }
+
+    /* When tab5 */
+    #tab5:checked ~ * #content5 {
+        @apply block opacity-100;
+    }
+
+    #tab5:checked ~ .flex .tab-link:nth-child(5) {
+        @apply border-b-2 border-b-primary;
+    }
+
+
+    /* When tab6 */
+    #tab6:checked ~ * #content6 {
+        @apply block opacity-100;
+    }
+
+    #tab6:checked ~ .flex .tab-link:nth-child(6) {
+        @apply border-b-2 border-b-primary;
+    }
+
+
+    /* When tab7 */
+    #tab7:checked ~ * #content7 {
+        @apply block opacity-100;
+    }
+
+    #tab7:checked ~ .flex .tab-link:nth-child(7) {
+        @apply border-b-2 border-b-primary;
+    }
 </style>
