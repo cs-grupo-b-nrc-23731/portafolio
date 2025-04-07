@@ -29,18 +29,6 @@ El diseño es completamente responsive, con alto rendimiento y orientado a mostr
 - 🎨 [TailwindCSS](https://tailwindcss.com/) – Utilidades para diseño rápido.
 - 🧠 [Shiki](https://github.com/shikijs/shiki) – Resaltado de código limpio y elegante.
 
----
-
-## 🖼️ Vistas del Proyecto
-
-### Sección "Sobre Mí"
-![Vista - Sobre Mí](assets/preview-about.png)
-
-### Sección "Proyectos"
-![Vista - Proyectos](assets/preview-projects.png)
-
----
-
 ## 📂 Cómo Usar Este Proyecto
 
 ```bash
