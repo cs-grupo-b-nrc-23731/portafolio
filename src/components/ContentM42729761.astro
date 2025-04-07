@@ -31,34 +31,15 @@ const members: M42729761[] = [{
 }];
 ---
 
-<div>
-
-    <h2 class="text-2xl font-bold text-white mb-4">Seguridad </h2>
-<span>La Universidad Continental es una institución educativa privada reconocida por su 
-compromiso con la excelencia académica y la innovación en la educación superior. 
-Algunos aspectos destacados de la universidad son: La excelencia académica, 
-variedad de programas, un enfoque innovador, promueve la investigación y 
-desarrollo, un fuerte enfoque social y apoyo estudiantil. 
-La universidad continental se ha consolidado como una institución reconocida en Perú 
-por su enfoque en la formación integral de sus estudiantes, la calidad de sus 
-programas académicos y su compromiso con la innovación educativa y el desarrollo 
-social.</span>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-<h1>Pagina de Wilfredo Callata</h1>
-
+ <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         {members.map(member =>
-
             <div class="flex flex-col justify-center items-start border border-gray-700 rounded-lg p-4 bg-black">
-
                 <h3 class="text-xl font-semibold text-white mb-2">
                     {member.name}
                 </h3>
-
                 <p class="text-gray-400">
                     {member.description}
                 </p>
-
                 {
                     member.link?.url ?
                         <a
@@ -83,5 +64,122 @@ social.</span>
         )}
 
     </div>
+<div>
+
+<h1 class="text-2xl font-bold text-white mb-4">Seguridad en el Proceso de Matricula </h1>
+<span>La Universidad Continental es una institución educativa privada reconocida por su 
+compromiso con la excelencia académica y la innovación en la educación superior. 
+Algunos aspectos destacados de la universidad son: La excelencia académica, 
+variedad de programas, un enfoque innovador, promueve la investigación y 
+desarrollo, un fuerte enfoque social y apoyo estudiantil. 
+La universidad continental se ha consolidado como una institución reconocida en Perú 
+por su enfoque en la formación integral de sus estudiantes, la calidad de sus 
+programas académicos y su compromiso con la innovación educativa y el desarrollo 
+social.</span>
+
+<br><br>
+<h1 class="text-2xl font-bold text-white mb-4">Proceso de Matricula </h1>
+<span>
+En el proceso de matrícula de la Universidad Continental, para salvaguardar la 
+información se debe hacer un control de las copias autorizadas y mantener protegida 
+toda información confidencial bajo contraseñas y se deben bloquear físicamente los 
+dispositivos y usar bloqueos de TI disponibles, como biometría y claves de seguridad. 
+Elige contraseñas seguras y no que se usan las misma en cuentas diferentes para 
+tener protegido toda la información. La confidencialidad es una forma única que se 
+encuentra autorizada para conceder a la información mediante autorización y control 
+la confidencialidad hace referencia a la necesidad de ocultar o mantener secreto 
+sobre determinados. Realice la validación solo en sistemas en cumplimiento con las 
+buenas prácticas. Garantice que los protocolos aborden la confiabilidad y calidad de 
+los datos. 
+</span>
+
+
+<br><br>
+<h1 class="text-2xl font-bold text-white mb-4">Confidencialidad de la Informacion </h1>
+<span>
+La confidencialidad en el sistema de matrícula de la Universidad Continental se refiere 
+a la protección de la información para asegurar que solo las personas autorizadas 
+puedan acceder a ella. En el contexto de la seguridad de la información, se refiere a 
+mantener la confidencialidad y esto significa implementar medidas que protejan los 
+datos personales, corporativos, gubernamentales o de cualquier otra índole, contra 
+accesos no autorizados o divulgación. 
+Métodos para garantizar la confidencialidad:
+
+Control de acceso: Utilizar sistemas de autenticación y autorización para 
+asegurar que solo los usuarios autorizados puedan acceder a la información 
+relevante. 
+
+Cifrado de datos: Aplicar tecnologías de cifrado tanto en el almacenamiento 
+como en la transmisión de datos para evitar que personas no autorizadas puedan 
+leerlos. 
+
+Políticas de privacidad: Desarrollar y mantener políticas que regulen el acceso 
+y uso de la información, protegiendo así los datos sensibles 
+
+
+Métodos para garantizar la confidencialidad en la matrícula de la Universidad 
+Continental: 
+Bloqueos de TI disponibles como biometría, dactilar y claves de seguridad. 
+Las contraseñas deben cumplir 4 parámetros (Contener número, letra minúscula, 
+letra mayúscula, caracteres)
+
+Proteger la información mediante encriptación y contraseñas - Implementar   bloqueos   físicos   de   los   dispositivos   que   albergan   la información. - Los alumnos deben evitar acceder a WIFI PÚBLICOS al momento de desarrollar su 
+proceso de matrícula ya que por medio de ellos pueden ser atacados cibernéticamente.  
+</span>
+
+<h1 class="text-2xl font-bold text-white mb-4">Controles respecto a la Integridad de la Informacion </h1>
+<span>En el proceso de matrícula de la Universidad Continental, la integridad de la 
+información es crucial para garantizar la veracidad y exactitud de los datos 
+registrados. Para ello, se aplican los siguientes controles: - - 
+Controles en la Captura y Registro de Datos: Validación de identidad del 
+estudiante con el uso de las credenciales únicas proporcionadas por la 
+universidad (correo electrónico y contraseña) en la plataforma de matrícula 
+previa verificación de los prerrequisitos, el sistema impide la inscripción en 
+cursos si no se han aprobado asignaturas previas (prerrequisitos) y solo el 
+personal autorizado puede modificar datos sensibles como historial académico 
+y pagos. 
+Una vez que complete los créditos permitidos por ciclo estas se bloquean para 
+la asignación de nuevos cursos (se generan alertas), evita la duplicidad de 
+matrícula en un mismo curso, asimismo se validan las restricciones de horarios 
+para evitar que un estudiante inscriba dos cursos en el mismo horario. 
+Controles en el Procesamiento de Datos: Cifrado y seguridad en la 
+transmisión de datos, la plataforma de matrícula utiliza protocolos de seguridad 
+como SSL/TLS para garantizar que los datos enviados no sean interceptados 
+o manipulados, toda la información es almacenada en bases de datos con 
+encriptación, evitando accesos no autorizados. 
+Los datos de matrícula están vinculados con otras áreas de la universidad, 
+como:  
+Sistema de pagos: Se verifica que el estudiante esté al día con sus 
+cuotas antes de permitir la matrícula. 
+Sistema académico: Se sincroniza la información para evitar errores en 
+la asignación de cursos y créditos conforme al plan de estudios. 
+Base de datos del Ministerio de Educación: En algunos casos, la 
+universidad reporta información a entidades reguladoras (registro de bachiller 
+o títulos). - - 
+Control de Almacenamiento: la universidad realiza copias de seguridad 
+automáticas de la información de matrícula para evitar pérdida de datos por 
+fallos técnicos, se implementan planes de recuperación de desastres en caso 
+de incidentes que comprometan la información. Asimismo. Se mantiene un 
+historial de cambios en los datos de matrícula, permitiendo rastrear 
+modificaciones y responsables de cada ajuste. 
+Se realizan auditorías periódicas para verificar la exactitud e integridad de la 
+información almacenada, sólo el personal autorizado (administradores 
+académicos y financieros) puede modificar información crítica, se utilizan 
+perfiles de usuario con distintos niveles de acceso para proteger los datos 
+sensibles. 
+Controles de Validación: la confirmación de matrícula por parte del estudiante 
+es una vez realizada el pago de la primera cuota, el estudiante recibe un 
+comprobante digital de los pagos realizados para realizar la matrícula. Se 
+establece un cronograma de matrícula donde el estudiante puede reportar 
+errores en su inscripción. 
+La universidad revisa y soluciona posibles inconsistencias antes de cerrar el 
+proceso de matrícula. Se generan reportes para detectar anomalías en la 
+inscripción de cursos y evitar errores administrativos. En caso de deudas 
+pendientes, el sistema puede restringir la inscripción hasta que se regularice la 
+situación. 
+Estos controles aseguran que el proceso de matrícula en la Universidad Continental 
+sea seguro, confiable y libre de errores. Con ellos, se protege la integridad de la 
+información, se evitan fraudes y se garantiza que los estudiantes solo se inscriban 
+en cursos para los que cumplen los requisitos.</span>
 
 </div>
