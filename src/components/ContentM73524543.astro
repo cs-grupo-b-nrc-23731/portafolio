@@ -1,77 +1,135 @@
 ---
-interface M73524543 {
-    name: string;
-    description: string;
-    link: {
-        url?: string;
-        target?: string;
-        title?: string;
-        buttonLabel?: string;
-    };
+const profile = {
+  name: "Gustavo Cutipa Pérez",
+  username: "inggcutipap",
+  bio: "Apasionado desarrollador de software",
+  location: "Arequipa, Perú",
+  website: "https://github.com/inggcutipap",
+  achievements: ["Desarrollo de una API para sincronización.", "Mi participación en diversos proyectos de código abierto."],
+  about: {
+    greeting: "¡Hola mundo! Soy Gustavo 👋",
+    intro: "Soy un apasionado desarrollador de software desde Arequipa, al sur del Perú.",
+    passion:
+      "Me encanta resolver problemas complejos con soluciones elegantes. Valoro la creatividad, la lógica y la innovación en todo lo que desarrollo.",
+    quote:
+      "“Tú puedes escribir el código más elegante, pero si no resuelve un problema real, no vale nada.”",
+    hobbies:
+      "Cuando no estoy programando, puedes encontrarme explorando nuevas ideas, escuchando música o caminando al aire libre.",
+  },
+  current: {
+    workingOn: "una app para sincronizar datos entre SQLite y MySQL sin internet.",
+    learning: "Arquitectura empresarial, TOGAF y React Native.",
+    collaboration: "Proyectos donde pueda aplicar soluciones creativas e innovadoras.",
+    askMeAbout:
+      "VB6, Android Studio, MySQL, APIs REST, arquitectura cliente-servidor.",
+    contact: "¡Solo salúdame por LinkedIn o por correo! 🤗",
+    pronouns: "14 de Octubre",
+    funFact: "Soy técnico en computación e informática y también INGENIERÍA DE SISTEMAS E INFORMÁTICA  💻",
+  },
+  skills: [
+    "JavaScript",
+    "TypeScript",
+    "React",
+    "Node.js",
+    "VB6",
+    "Android Studio",
+    "MySQL",
+    "SQLite",
+    "C#",
+    ".NET Core",
+    "Tailwind CSS",
+    "TOGAF",
+  ],
 };
-
-const members: M73524543[] = [{
-    name: '73524543 - Gustavo-Oscar.io',
-    description: 'there is no content',
-    link: {
-        url: 'https://papersend.io/',
-    }
-// }, {
-//     name: 'Qivi.io',
-//     description: 'Qivi is an all-in-one application designed to streamline business operations, enhance productivity, and maximize success. Data security is a priority.',
-//     link: {
-//         url: 'https://qivi.io/'
-//     }
-// }, {
-//     name: 'TECHPOINT.de',
-//     description: 'TECHPOINT is a local IT service provider based in the Starnberg district and the Fünfseenland region, specializing in delivering reliable and modern IT solutions.',
-//     link: {
-//         url: 'https://techpoint.de/'
-//     }
-}];
 ---
 
-<div>
-
-    <!-- <h2 class="text-2xl font-bold text-white mb-4">Latest Projects</h2> -->
-
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-
-        {members.map(member =>
-
-            <div class="flex flex-col justify-center items-start border border-gray-700 rounded-lg p-4 bg-black">
-
-                <h3 class="text-xl font-semibold text-white mb-2">
-                    {member.name}
-                </h3>
-
-                <p class="text-gray-400">
-                    {member.description}
-                </p>
-
-                {
-                    member.link?.url ?
-                        <a
-                            href={member.link.url}
-                            title={member.link.title || member.name}
-                            target={member.link.target || '_blank'}
-                            class="
-                                w-full px-4 py-2.5 mt-4 text-center
-
-                                border border-gray-600 rounded-lg
-
-                                hover:text-primary
-                                hover:border-primary
-                            ">
-                            {member.link.buttonLabel || 'Open Project Website'}
-                        </a>
-                    : null
-                }
-
-            </div>
-
-        )}
-
+<div class="max-w-3xl mx-auto bg-zinc-900 text-white p-6 rounded-2xl shadow-lg space-y-6">
+  <div class="flex items-center space-x-4">
+    <img
+      src="https://lh3.googleusercontent.com/-gMqaG4PhBgw/AAAAAAAAAAI/AAAAAAAAAAA/ALKGfkkcWvS3y9iB1zCHxDgwG779iOk6OA/photo.jpg?sz=46"
+      alt="Avatar"
+      class="w-16 h-16 rounded-full border-2 border-pink-500"
+    />
+    <div>
+      <h1 class="text-2xl font-bold">{profile.name}</h1>
+      <p class="text-pink-400">@{profile.username}</p>
+      <p class="text-gray-400">{profile.bio}</p>
     </div>
+  </div>
 
+  <div class="flex justify-between text-sm text-gray-400">
+    <span>📍 {profile.location}</span>
+    <span>🕐 <span id="local-time">Cargando hora...</span></span>
+  </div>
+
+  <a href={profile.website} target="_blank" class="text-blue-400 hover:underline">
+    🌐 {profile.website}
+  </a>
+
+  <div>
+    <h2 class="text-lg font-semibold">🎖️ LOGROS</h2>
+    <ul class="list-disc list-inside text-gray-300">
+      {profile.achievements.map((item) => <li>{item}</li>)}
+    </ul>
+  </div>
+
+  <div>
+    <h2 class="text-lg font-semibold">👨‍💻 SOBRE MI</h2>
+    <p class="mt-2">{profile.about.greeting}</p>
+    <p class="mt-1">{profile.about.intro}</p>
+    <p class="mt-1">{profile.about.passion}</p>
+    <blockquote class="mt-2 italic text-pink-300 border-l-4 pl-4 border-pink-500">
+      {profile.about.quote}
+    </blockquote>
+    <p class="mt-2">{profile.about.hobbies}</p>
+  </div>
+
+  <div>
+    <h2 class="text-lg font-semibold">🚀 ESTADO ACTUAL</h2>
+    <ul class="list-disc list-inside text-gray-300 space-y-1">
+      <li>🔭 Trabajando en {profile.current.workingOn}</li>
+      <li>🌱 Aprendiendo {profile.current.learning}</li>
+      <li>🤝 Buscando colaborar en {profile.current.collaboration}</li>
+      <li>💬 Pregúntame sobre {profile.current.askMeAbout}</li>
+      <li>📫 {profile.current.contact}</li>
+      <li>😄 Mi Cumpleaños: {profile.current.pronouns}</li>
+      <li>⚡ Dato curioso: {profile.current.funFact}</li>
+    </ul>
+  </div>
+<div>
+    <h2 class="text-lg font-semibold">🔗 Encuéntrame en LinkedIn</h2>
+    <a href="https://linkedin.com/in/gustavo-oscar-cutipa-perez-50b07b35b" target="_blank" class="text-blue-400 hover:underline">
+      Visita mi perfil en LinkedIn
+    </a>
+  </div>
+
+  <div>
+    <h2 class="text-lg font-semibold">🛠️ Habilidades</h2>
+    <div class="flex flex-wrap gap-2 mt-2">
+      {profile.skills.map((skill) => (
+        <span class="px-3 py-1 bg-zinc-800 border border-gray-600 rounded-full text-sm">
+          {skill}
+        </span>
+      ))}
+    </div>
+  </div>
 </div>
+
+<script>
+  const timeElement = document.getElementById('local-time');
+
+  function updateTime() {
+    const options = {
+      hour: '2-digit',
+      minute: '2-digit',
+      hour12: false,
+      timeZone: 'America/Lima'
+    };
+
+    const time = new Intl.DateTimeFormat('es-PE', options).format(new Date());
+    timeElement.textContent = `${time} - GMT-5`;
+  }
+
+  updateTime(); // Mostrar al cargar
+  setInterval(updateTime, 60000); // Actualizar cada minuto
+</script>
