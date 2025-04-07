@@ -1,77 +1,109 @@
----
-interface M00447908 {
-    name: string;
-    description: string;
-    link: {
-        url?: string;
-        target?: string;
-        title?: string;
-        buttonLabel?: string;
-    };
-};
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio | Sebastian Mamani Chino</title>
+    <style>
+        :root {
+            --primary-color: #d32f2f; /* Rojo intenso */
+            --secondary-color: #f57c00; /* Naranja fuerte */
+            --accent-color: #ffeb3b; /* Amarillo vibrante */
+            --bg-color: #2e2e2e; /* Gris oscuro */
+            --text-color: #ffffff; /* Texto blanco */
+        }
 
-const members: M00447908[] = [{
-    name: '00447908 Sebastian-Martin.io',
-    description: 'there is no content',
-    link: {
-        url: 'https://papersend.io/',
-    }
-// }, {
-//     name: 'Qivi.io',
-//     description: 'Qivi is an all-in-one application designed to streamline business operations, enhance productivity, and maximize success. Data security is a priority.',
-//     link: {
-//         url: 'https://qivi.io/'
-//     }
-// }, {
-//     name: 'TECHPOINT.de',
-//     description: 'TECHPOINT is a local IT service provider based in the Starnberg district and the Fünfseenland region, specializing in delivering reliable and modern IT solutions.',
-//     link: {
-//         url: 'https://techpoint.de/'
-//     }
-}];
----
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
 
-<div>
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
 
-    <!-- <h2 class="text-2xl font-bold text-white mb-4">Latest Projects</h2> -->
+        section {
+            padding: 2rem;
+            max-width: 1000px;
+            margin: auto;
+        }
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        h1, h2 {
+            margin-bottom: 0.5rem;
+        }
 
-        {members.map(member =>
+        .highlight {
+            color: var(--accent-color);
+        }
 
-            <div class="flex flex-col justify-center items-start border border-gray-700 rounded-lg p-4 bg-black">
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
 
-                <h3 class="text-xl font-semibold text-white mb-2">
-                    {member.name}
-                </h3>
+        .skill {
+            background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+            color: black;
+            border: none;
+            border-radius: 12px;
+            padding: 1rem;
+            text-align: center;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+            transition: transform 0.2s, box-shadow 0.3s;
+            cursor: pointer;
+        }
 
-                <p class="text-gray-400">
-                    {member.description}
-                </p>
+        .skill:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.5);
+        }
 
-                {
-                    member.link?.url ?
-                        <a
-                            href={member.link.url}
-                            title={member.link.title || member.name}
-                            target={member.link.target || '_blank'}
-                            class="
-                                w-full px-4 py-2.5 mt-4 text-center
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Sebastian <span class="highlight">Mamani Chino</span></h1>
+        <p>Estudiante de Ingeniería de Software - 7mo ciclo</p>
+    </header>
 
-                                border border-gray-600 rounded-lg
+    <section>
+        <h2>Sobre mí</h2>
+        <p>Soy un apasionado por el desarrollo de software y la optimización de sistemas. Me especializo en inteligencia artificial, ciberseguridad y desarrollo de aplicaciones eficientes. Busco siempre estar actualizado con las nuevas tecnologías para seguir innovando.</p>
+    </section>
 
-                                hover:text-primary
-                                hover:border-primary
-                            ">
-                            {member.link.buttonLabel || 'Open Project Website'}
-                        </a>
-                    : null
-                }
+    <section>
+        <h2>Habilidades</h2>
+        <div class="skills">
+            <div class="skill">Python</div>
+            <div class="skill">C++</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">React</div>
+            <div class="skill">Node.js</div>
+            <div class="skill">SQL</div>
+            <div class="skill">Docker</div>
+            <div class="skill">Ciberseguridad</div>
+            <div class="skill">Machine Learning</div>
+            <div class="skill">Optimización de Algoritmos</div>
+        </div>
+    </section>
 
-            </div>
-
-        )}
-
-    </div>
-
-</div>
+    <footer>
+        <p>&copy; 2025 Sebastian Mamani Chino</p>
+    </footer>
+</body>
+</html>
